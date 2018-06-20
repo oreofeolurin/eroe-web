@@ -39,8 +39,7 @@ $input-btn-focus-width:       .1rem !default;
 /// App specific variables
 
 // Relative or absolute URL where all assets are served from
-$STATIC_DOMAIN : 'http://10.0.37.9/retailloanclient/assets' !default;
-//$STATIC_DOMAIN : '/assets' !default;
+$STATIC_DOMAIN : '/assets' !default;
 
 
 $zindex-progressbar:   1100 !default;
