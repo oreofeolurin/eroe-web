@@ -1,0 +1,28 @@
+
+#side-nav-container {
+    @include media-breakpoint-down(sm){ padding: 0 }
+    background-color: #fff;
+    // background-color: $secondary;
+
+    #side-nav {
+        width: 100vw;
+        display: flex;
+        overflow: visible;
+    }
+
+    .content-view {
+        min-height: calc(100vh - 58px); //Total height - topbar height
+        //margin:58px auto;
+        margin:58px auto 0 auto;
+        width: 100%;
+
+        &.no-margin {
+            min-height: calc(100vh); //Total height
+        }
+
+        main {
+            padding-top: 1px;
+        }
+    }
+
+}

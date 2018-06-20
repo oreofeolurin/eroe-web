@@ -1,0 +1,39 @@
+// Import the fonts
+@import "../abstracts/variables";
+
+@mixin font-face($name, $path, $style, $weight, $svg) {
+
+    @font-face {
+        font-family: $name;
+        src: url('#{$path}.eot');
+        src: url('#{$path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$path}.woff') format('woff'),
+        url('#{$path}.ttf') format('truetype'),
+        url('#{$path}.svg##{$svg}') format('svg');
+        font-style: $style;
+        font-weight: $weight;
+
+    }
+
+}
+
+
+//Museo Sans
+
+$museo-sans :  "Museo Sans";
+$museo-sans-regular-font-path :  "#{$STATIC_DOMAIN}/fonts/museo-sans/regular/museo-sans-regular-webfont";
+$museo-sans-bold-font-path :  "#{$STATIC_DOMAIN}/fonts/museo-sans/bold/museo-sans-bold-webfont";
+$museo-sans-italic-font-path :  "#{$STATIC_DOMAIN}/fonts/museo-sans/italic/museo-sans-italic-webfont";
+$museo-sans-light-font-path :  "#{$STATIC_DOMAIN}/fonts/museo-sans/light/museo-sans-light-webfont";
+
+//Create Museo Sans Normal Regular
+@include font-face($museo-sans, $museo-sans-regular-font-path, 'normal', 'normal', 'museo_sans_300regular');
+
+//Create Museo Sans Normal Bold
+@include font-face($museo-sans, $museo-sans-bold-font-path, 'normal', 700, 'museo_sans_700regular');
+
+//Create Museo Light Normal
+@include font-face($museo-sans, $museo-sans-light-font-path, 'normal', 100, 'museo_sans_100regular');
+
+//Create Museo Italic Normal
+@include font-face($museo-sans, $museo-sans-italic-font-path, 'italic', 300, 'museo_sans_300italic');

@@ -1,0 +1,158 @@
+@import "../../../../styles/abstracts";
+
+main {
+    padding-top: 10px;
+
+
+
+    .main-header {
+        margin-bottom: 30px;
+        span { font-size: $font-size-sm; color: $gray-600}
+
+        h4 {font-weight:  bold}
+    }
+
+
+    .story-section {
+
+        header h6 {
+            color: $primary;
+            font-weight: bold;
+            border-bottom: 1px solid $primary;
+            padding-bottom: 5px;
+        }
+
+
+        .medium-view {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            h6 { font-weight: bold}
+
+            .image img {
+                width: 100%;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                &:hover { transform: scale(0.95); }
+            }
+
+
+            .summary {
+                font-size: $font-size-sm;
+                font-weight: bold;
+                .mat-icon {
+                    color: $primary;
+                    vertical-align: bottom;
+                    float: right;
+                }
+            }
+        }
+
+        .bullet-view {
+
+            .view {
+                padding-top: 10px;
+                &:not(:first-child) {
+                    border-top: 1px solid #ccc;
+                }
+
+                .indicators .time {
+                    .goto-story .mat-icon {
+                        color: $primary;
+                        vertical-align: bottom;
+                    }
+                }
+
+            }
+        }
+
+
+        .medium-view .indicators, .bullet-view  .indicators {
+            padding: 10px 0;
+            color: $gray-600;
+            font-size: $font-size-sm;
+            display: flex;
+            justify-content: space-between;
+
+            .social {
+                cursor: pointer;
+                //transform: scale(0.2);
+                transition: all .5s ease-in-out;
+                zoom: 0.8;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+    }
+
+
+    .achievement-section {
+        margin-top: 50px;
+        padding: 30px;
+        background: $primary;
+
+        h4 { font-weight: bold; color: #fff}
+
+        .achievements {
+            text-align: center;
+            color: #fff;
+            font-size: $font-size-sm;
+        }
+    }
+
+
+    .quote-section {
+        text-align: center;
+        margin-top: 20px;
+        padding: 30px;
+
+        .quote-image { color: $primary}
+
+        .text { font-weight: bold}
+
+        button {
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-top: 20px;
+        padding: 30px;
+        background: $gray-50;
+        font-size: $font-size-sm;
+
+        .socials {
+            padding: 20px;
+            .social {
+                border: 1px solid #ccc;
+                border-radius: 100%;
+                padding: 10px;
+                margin: 10px;
+                cursor: pointer;
+                transition: background-color .5s;
+
+                &:hover {
+                    background: $primary;
+                    border: 1px solid transparent;
+                    .mat-icon { color: white}
+                }
+
+                .mat-icon {
+                    vertical-align: middle;
+                    zoom: 0.8;
+                    color: $gray-600;
+                }
+            }
+        }
+    }
+}
+
